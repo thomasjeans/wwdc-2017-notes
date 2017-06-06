@@ -168,6 +168,17 @@ Refine and iterate for your use case
 #### Summary
 ##### This is a very powerful new set of features. I don't think they would have invested all this time in designing this system if it didn't have a lot of potential. Will dig deeper in future sessions and after visiting the labs.
 
+### Session 402 - What's New in Swift
+
+### Session 703 - Introducing Core ML
+
+### Session 704 - Creating Immersive Apps with Core Motion
+DeviceMotion, a powerful API from watchOS is now available for iPhone 7 and iPhone 7 Plus with iOS 11
+
+Go back and look at 2016 SceneKit demo, get this Badger game
+
+To use DeviceMotion, you create a ```CMMotionManager``` object and call ```startDeviceMotionUpdates()``` with the appropriate reference frame
+
 ## Open Questions
 1. WebViews support drag and drop by default , which ones?  UIWebView? WKWebView? SafariVC?
 2. Which hardware supports iOS 11 productivity?
