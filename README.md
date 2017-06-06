@@ -72,7 +72,7 @@ New class ```UIFontMetrics``` that lets you create standard size with a custom f
 
 Auto Layout has a new ```constraintEqualToSystemSpacing``` method that takes two anchors and tries to work out a good fit based on Dynamic Type changes
 
-NOTE: A lot of Auto Layout code was shown with no storyboards...do these two prefer programatic?
+_NOTE: A lot of Auto Layout code was shown with no storyboards...do these two prefer programatic?_
 
 ##### Password AutoFill
 System detects User / Password UI fields and presents a key that launches your iCloud Keychain stored passwords
@@ -95,8 +95,79 @@ Can ask ```UIScreen``` for ```maximumFramesPerSecond```
 
 Key as always is to optimize drawing code using Instruments
 
-##### Summary
-###### What's new in CocoaTouch?  Not all that much.  Some solid hardening and minor feature additions.
+#### Summary
+##### What's new in CocoaTouch?  Not all that much.  Some solid hardening and minor feature additions.
 
 ### Session 203 - Introducing Drag and Drop
 
+#### Goals
+- Be responsive
+- Secure, more so than pasteboard
+- A great multi-touch experience
+
+#### Demo
+You can drag links into Safari as a tab
+
+Seems like an impressive implementation but will more casual users want to use this workflow?
+
+_NOTE: iOS 11 icons are looking flatter and more minimal than ever, new App Store icon is like empty_
+
+#### Phases of a Drag Session
+- Lift
+- Drag
+- Set Down
+- Data Transfer
+
+#### Drag API
+UIDragInteraction has a delegate similar to gesture recognizers
+
+UIDragItem is the model object
+
+You can enable a drop using ```UIPasteConfiguration``` but ```UIDropInteraction``` is the more robust API that has a delegate that returns an intention (not an Android Intent), it can say no thanks or call ```performDrop```
+
+#### API RoadMap
+Source application > middle ground where both may have access (plus the OS?) > Destination application
+
+UIKit manages timeline and lifecycle of a drag and drop session
+
+High level flow is:
+- Get items to drop
+- Get a drop proposal
+- Perform the drop
+
+NSItem provider only deals in Objects, so String should be cast to NSString
+
+UIDropOperation has enumerated values of .cancel, copy, .move, .forbidden
+
+NOTE: Look for a Ray Wenderlich or NSHipster tutorial on this.  It's a fairly involved API.  Get the sample code and mess around with it.
+
+Only one drag interation but could be multiple drop interactions as the drag is hovering over drop target views. There are some cool opportunities for creative UX here as users drag over different types views.
+
+SpringLoading is a thing, something happens when a drag hovers over a spring loaded view?
+
+This is a substantial API with powerful delegates on the level of ```UITableView``` or ```UICollectionView```
+
+#### Demo
+Demo app shows dragging photos from Photos to pin board app, you can drag around from within that app, cool use cases here
+
+Use .copy for between applications and .move within the same app
+
+Interesting that some of the delegates take a position of type ```CGPoint```, doesn't seem the most Auto Layout friendly?
+
+#### Next Steps
+Exlpre the system
+
+Start simple by adopting drop target
+
+Try the drag source delegates
+
+Spring load a few controls
+
+Refine and iterate for your use case
+
+#### Summary
+##### This is a very powerful new set of features. I don't think they would have invested all this time in designing this system if it didn't have a lot of potential. Will dig deeper in future sessions and after visiting the labs.
+
+## Open Questions
+1. WebViews support drag and drop by default , which ones?  UIWebView? WKWebView? SafariVC?
+2. Which hardware supports iOS 11 productivity?
