@@ -48,7 +48,7 @@ Check out Design Studio Shorts session
 #### API Enhancements
 
 ##### Swift 4 and Foundation
-New API for encoding Swift data structures like Enum and Stuct
+New API for archiving Swift types like Enum and Stuct
 
 New KeyPath type
 
@@ -56,11 +56,11 @@ Updates to KVO with KeyPaths
 
 Block-based KVO
 
-Deferring system gestures...
+##### Deferring System Gestures
 
-Notification Center - iOS 5
+- Notification Center - iOS 5
 
-Control Center - iOS 7
+- Control Center - iOS 7
 
 iOS 11 provides override method that returns ```UIRectEdge``` objects you want to protect (aka defer the system gesture)
 
@@ -81,6 +81,7 @@ Add an entitlement to your app then a few lines of JSON
 
 Entire session on Password AutoFill
 
+##### Asset Catalogs
 Colors and icons can be added to Asset Catalogs
 
 App thinning for icons - adopted by default in iOS 11 new projects
