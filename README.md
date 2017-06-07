@@ -295,57 +295,44 @@ Memory graph debugger is built with SpriteKit and the visual debugger uses Scene
 :construction:
 
 ### Session 802 - Essential Design Principles
-:construction:
-TODO: - Go back and confirm these questions...
+The session speaks for itself and notes won't really do it justice
 
-Every screen in your experience should be able to answer:
-- Where am I?
-- How did I get here?
-- What's next?
-- What should I expect to find there?
-- How do I get out?
+They discussed in detail the design principles of:
+- Wayfinding
+- Feedback
+- Visibility
+- Consistency
+- Mental Model
+- Proximity
+- Grouping
+- Mapping
+- Affordance
+- Progressive Disclosure
+- 80/20 Rule
+- Symmetry
 
-#### Feedback
-Discussed the example of a car and how much feedback the instument cluster in the dash gives you
+Loved this quote, "When a system breaks out mental model, we perceive it to be unintuitive."
 
-Use sounds, animations, and techniques like inlining dates to give feedback
-
-Good feedback means your users should be able to answer:
-What can I do?
-What just happened?
-What's happening?
-What will happen in the future?
-
-#### Visibility
-#### Consistency
-Apple calls the action / share glyph the "sharrow"
-
-Internal consistency provides cohesion
-
-#### Mental Model vs System Model vs Interaction Model
-When a system breaks out mental model, we perceive it to be unintuitive
-
-#### Proximity
-
-#### Grouping
-
-#### Mapping
-
-#### Affordance
-
-#### Progressive Disclosure
-
-#### Symmetry
-
-feel safe
-understnad
-achieve
-experience beauty and joy
+All of these principles allow users to:
+- feel safe
+- understnad
+- achieve
+- experience beauty and joy
 
 #### Summary
-##### Not much substance here. If you're expecting a deep dive into LLDB and hardcore debugging, you won't find it in this session. Nice love shown to SpriteKit and Scenekit.
+##### This was a very cool session that should be a must watch for any engineer working on front end development (or API design). I plan to use this as a reference for high level UX best practices for a long time to come.
+
+### Session 506 - Vision Framework: Building On Core ML
+:construction:
+
+### Session 803 - Designing Sound
+:construction:
 
 ## Open Questions
 1. WebViews support drag and drop by default , which ones?  UIWebView? WKWebView? SafariVC?
 2. Which hardware supports iOS 11 productivity?
 3. How far does the Xcode feature to mirror the file system from your groups go?
+
+## Watch List
+- Both networking sessions
+- WKWebView loading
