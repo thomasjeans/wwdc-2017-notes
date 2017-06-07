@@ -1,6 +1,13 @@
 # WWDC 2017 Notes
 
-## Tuesday June 6, 2017
+## Day 1: Tuesday June 5, 2017
+
+### Session 101 - WWDC 2017 Keynote
+:construction:
+### Session 102 - Platforms State of the Union
+:construction:
+
+## Day 2: Tuesday June 6, 2017
 
 ### Session 201 - What's New in Cocoa Touch
 
@@ -246,6 +253,48 @@ Sprites are treated like billboards in ARKit, meaning they always face the camer
 #### Summary
 ##### ARKit looks fucking amazing! This could be a serious game changer. The integration with SpriteKit and SceneKit will be rewarding for the small community of developers who have spent time learning these frameworks. I am curious what the interaction with AR will look like over time. It may end up as more of a watchOS experience where you experience cool easter eggs in AR over shorter durations. I can't see myself looking at the world through the lense of my phone screen for minutes or hours on end as you would with a traditional app or game. That said, this is some epic tech.
 
+## Day 2: Tuesday June 7, 2017
+
+### Session 404 - Debugging with Xcode 9
+
+#### Wireless Development
+No more fighting over lightning cables
+
+This will be good for AR, VR, and camera app development
+
+Support for tvOS too
+
+Quicktime supported wirelessly on tvOS for screen sharing
+
+There is a Connect via Network option in Devices screen
+
+You can connect via IP address for "complex" networks
+
+Brave live demo of hitting a breakpoint wirelessly. At this point, they can stop selling it. We are all going to use this from now until forever anyway
+
+There are some nice minor improvements to Instruments like the ability to transfer a debugging session and pin a track to the bottom to align it with other lanes
+
+#### Breakpoints
+Code completion added to debugging conditions and actions
+
+Breakpoints show you if they have options set
+
+Breakpoint navigator deep filtering
+
+#### View Controller Debugging
+View Controllers show up in the navigator under the square hotdog
+
+SpriteKit and SceneKit are now first class citizens in the view debugger
+
+Memory graph debugger is built with SpriteKit and the visual debugger uses SceneKit!!!
+
+#### Summary
+##### Not much substance here. If you're expecting a deep dive into LLDB and hardcore debugging, you won't find it in this session. Nice love shown to SpriteKit and Scenekit.
+
+### Session 212 - What's New in Foundation
+:construction:
+
 ## Open Questions
 1. WebViews support drag and drop by default , which ones?  UIWebView? WKWebView? SafariVC?
 2. Which hardware supports iOS 11 productivity?
+3. How far does the Xcode feature to mirror the file system from your groups go?
