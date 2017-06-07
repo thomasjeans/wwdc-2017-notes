@@ -179,6 +179,71 @@ Go back and look at 2016 SceneKit demo, get this Badger game
 
 To use DeviceMotion, you create a ```CMMotionManager``` object and call ```startDeviceMotionUpdates()``` with the appropriate reference frame
 
+### Session 602 - Introducing ARKit: Augmented Reality for iOS
+Augmented Reality is creating the illusion that virtual objects appear in the physical world
+
+Sneak Peaks at WithIn - Storytelling with AR, Ikea - Virtual furniture shopping, PokemonGo - Better AR UX
+
+ARKit is supported on A9 and up (iPhone 6S and iPhone 6S Plus)
+
+Framework provides tracking, scene understanding, and rendering to simplify the developer experience
+
+There are ARViews for SpriteKit and SceneKit
+
+Unity and Unreal are supporting full set of features from ARKit
+
+#### Getting Started
+
+ARKit calls AVFoundation and CoreMotion
+
+```ARSessionConfiguration``` lets you create an ```ARSession```, then run it
+
+```ARSession``` produces ```ARFrame```s, you can inspect the ```currentFrame``` property or sign up as the delegate
+
+```ARFrame```uses ```ARAnchor```
+
+#### Tracking
+World Tracking gives you information about position, orientation, scale, physical distance movement - all relative to the starting point of your ```ARSession```
+
+```ARCamera``` is the virtual camera for the 3D scene (not the device camera)
+
+#### Demo
+They show how to make a simple hello world ARKit app
+
+SceneKit APIs work very nicely with ARKit
+
+You can add a gesture recognizer to the base app template to do some really cool things like putting a snapshot view on a plane
+
+#### More on Tracking
+The framework gives you a ```cameraDidChangeTrackingState``` delegate method to let you know when the user is facing a white wall or bad lighting conditions
+
+There are also delegate methods to inform you when tracking was interupted or ended
+
+#### Scene Understanding
+First step is plane detection, is there a surface available?
+
+Plane detection runs over multiple frames to build full understanding of the world and provide ```ARPlanAnchor```s
+
+Hit-testing provides an array of hit-test results in the order of nearest to the camera first
+
+Light Estimation lets you understand relative brightness of the world so you can apply the right lighting to your augmentation
+
+#### Demo
+Debug mode shows you plane detection in real time, pretty impressive
+
+Real world scaling is enabled by real world tracking and the model itself being created using real world coordinates
+
+The ARKitExample demo app is one of the most insane things I have ever seen
+
+There is an ```ARSCNViewDelegate``` that provides more seamless integration with SceneKit
+
+You also get an ```ARSKView``` which maps ```SKNodes``` to ```ARAnchors```
+
+Sprites are treated like billboards in ARKit, meaning they always face the camera
+
+#### Summary
+##### ARKit looks fucking amazing! This could be a serious game changer. The integration with SpriteKit and SceneKit will be rewarding for the small community of developers who have spent time learning these frameworks. I am curious what the interaction with AR will look like over time. It may end up as more of a watchOS experience where you experience cool easter eggs in AR over shorter durations. I can't see myself looking at the world through the lense of my phone screen for minutes or hours on end as you would with a traditional app or game. That said, this is some epic tech.
+
 ## Open Questions
 1. WebViews support drag and drop by default , which ones?  UIWebView? WKWebView? SafariVC?
 2. Which hardware supports iOS 11 productivity?
