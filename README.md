@@ -169,8 +169,10 @@ Refine and iterate for your use case
 ##### This is a very powerful new set of features. I don't think they would have invested all this time in designing this system if it didn't have a lot of potential. Will dig deeper in future sessions and after visiting the labs.
 
 ### Session 402 - What's New in Swift
+:construction:
 
 ### Session 703 - Introducing Core ML
+:construction:
 
 ### Session 704 - Creating Immersive Apps with Core Motion
 DeviceMotion, a powerful API from watchOS is now available for iPhone 7 and iPhone 7 Plus with iOS 11
