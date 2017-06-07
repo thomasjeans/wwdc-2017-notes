@@ -294,6 +294,57 @@ Memory graph debugger is built with SpriteKit and the visual debugger uses Scene
 ### Session 212 - What's New in Foundation
 :construction:
 
+### Session 802 - Essential Design Principles
+:construction:
+TODO: - Go back and confirm these questions...
+
+Every screen in your experience should be able to answer:
+- Where am I?
+- How did I get here?
+- What's next?
+- What should I expect to find there?
+- How do I get out?
+
+#### Feedback
+Discussed the example of a car and how much feedback the instument cluster in the dash gives you
+
+Use sounds, animations, and techniques like inlining dates to give feedback
+
+Good feedback means your users should be able to answer:
+What can I do?
+What just happened?
+What's happening?
+What will happen in the future?
+
+#### Visibility
+#### Consistency
+Apple calls the action / share glyph the "sharrow"
+
+Internal consistency provides cohesion
+
+#### Mental Model vs System Model vs Interaction Model
+When a system breaks out mental model, we perceive it to be unintuitive
+
+#### Proximity
+
+#### Grouping
+
+#### Mapping
+
+#### Affordance
+
+#### Progressive Disclosure
+
+#### Symmetry
+
+feel safe
+understnad
+achieve
+experience beauty and joy
+
+#### Summary
+##### Not much substance here. If you're expecting a deep dive into LLDB and hardcore debugging, you won't find it in this session. Nice love shown to SpriteKit and Scenekit.
+
 ## Open Questions
 1. WebViews support drag and drop by default , which ones?  UIWebView? WKWebView? SafariVC?
 2. Which hardware supports iOS 11 productivity?
