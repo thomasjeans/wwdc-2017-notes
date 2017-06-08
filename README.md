@@ -253,7 +253,7 @@ Sprites are treated like billboards in ARKit, meaning they always face the camer
 #### Summary
 ##### ARKit looks fucking amazing! This could be a serious game changer. The integration with SpriteKit and SceneKit will be rewarding for the small community of developers who have spent time learning these frameworks. I am curious what the interaction with AR will look like over time. It may end up as more of a watchOS experience where you experience cool easter eggs in AR over shorter durations. I can't see myself looking at the world through the lense of my phone screen for minutes or hours on end as you would with a traditional app or game. That said, this is some epic tech.
 
-## Day 2: Tuesday June 7, 2017
+## Day 3: Wednesday June 7, 2017
 
 ### Session 404 - Debugging with Xcode 9
 
@@ -331,8 +331,10 @@ All of these principles allow users to:
 ## Open Questions
 1. WebViews support drag and drop by default , which ones?  UIWebView? WKWebView? SafariVC?
 2. Which hardware supports iOS 11 productivity?
-3. How far does the Xcode feature to mirror the file system from your groups go?
+3. How far does the Xcode feature to mirror the file system from your groups go? When you create a new group, does it create a new folder?
 
 ## Watch List
-- Both networking sessions
-- WKWebView loading
+- Mastering Drag and Drop
+- Advances in Networking, Part 1
+- Advances in Networking, Part 2
+- Customized Loading in WKWebView
