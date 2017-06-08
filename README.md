@@ -468,6 +468,66 @@ You can achieve an increase from 2.5kbps to nearly 400kbps using L2CAP directly 
 #### Summary
 ##### Support for Watch Series 2 and direct access to the L2CAP protocol are the big news here. There are also a lot of oppotunities to increase connection speeds with the latest Bluetooth and L2CAP.
 
+### Session 229 - Building Great Document-based Apps in iOS 11
+#### UIDocumentBrowserViewController
+There is a ```UISupportsDocumentBroswer``` key you need to set to ```YES``` in your info.plist
+```UIDocumentBrowserViewController``` has a didRequestDocumentCreationWithHandler delegate method that let's you create documents
+
+Other delegate methods get called when document creation completed, failed
+
+You configure the Document Types your document browser view controller can pick in a different section of the info.plist
+
+```UIDocument``` works naturally with ```UIDocumentBrowserViewController``` and gives you a lot of features out of the box
+
+Your ```UIDocument``` subclass is where you load the actual document
+
+A ```UIDocumentViewController``` subclass is where you open and close the ```UIDocument``` object
+
+The ```UIDocumentBrowserViewController``` presents your document view controllers
+
+There are 3 styles of ```UIDocumentBrowserViewController``` interfaces: dark, light, and white
+
+The tintColor of the browser controller's view updates almost every control or element, together, these two properties let you quickly update the entire color scheme of your UI
+
+#### Open In Place
+This shows a pop over in springboard with a preview of the documents available to open
+
+The Xcode template implements open in place for you
+
+Calls your app delegate, you can check if the inputURL is a fileURL and if so, handle opening and presenting it
+
+#### Custom Actions
+```UIDocumentBrowserAction``` lets you define an action and a completion handler
+
+Seems like a nice block based API, these seem to be a theme of recent CocoaTouch APIs and of the conference 
+
+#### Custom Transitions
+Let you customize creating or opening an existing document
+
+```UIDocumentBrowserViewController``` creates the transitioning view controller for you
+
+All you need to do is set the target view from the destination view controller and implement the ```UIViewControllerTransitioningDelegate``` protocol
+
+Works for presenting and dismissing the document view controller
+
+#### Thumbnails
+There is a fileAttributesToWrite delegate method on your ```UIDocument``` subclass for files created by your application
+
+There is also a new Thumbnail Extension that works system-wide under the QuickLook framework
+
+The cloud provider asks QuickLook to look for any extensions with the thumbnail types
+
+You can only provide thumbnails for UTIs that you own
+
+You can draw the thumbnail or provide an image file URL
+
+This is pretty sweet and will result in a rich platform wide document access system
+
+There are strong implications here for a video moment sharing application
+
+#### Summary
+##### This is a big set of APIs. The team seems to have really thought this through and all of the features you would expect are here. You can get started with a base implementation by using UIDocument based documents with UIDocumentBrowserViewController and reach deeper for more powerful customizations like non iCloud cloud providers, VC transitions, and document thumbnails.
+
 ## Open Questions
 1. WebViews support drag and drop by default , which ones?  UIWebView? WKWebView? SafariVC?
 2. Which hardware supports iOS 11 productivity?
