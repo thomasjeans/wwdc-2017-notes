@@ -328,6 +328,44 @@ All of these principles allow users to:
 ### Session 803 - Designing Sound
 :construction:
 
+### Session 2220 - Safari, WebKit, and Password AutoFill Lab
+:lock:
+
+## Day 4: Tuesday June 8, 2017
+
+### Session 223 - Drag and Drop with Collection and Table View
+
+#### Placeholders 
+Don't use ```reloadData```, use ```performBatchUpdates``` to avoid losing the placeholder cells
+
+Placeholder cells come with a built in progress loading UI, can this be overriden?
+
+#### Supporting Reordering
+Use a drop proposal with type of .move
+
+Table View will call ```performDropWith``` behind the scenes
+
+Collection View requires you to provide a dragDelegate and dropDelegate
+
+Collection View now allows for a reorderingCadence of:
+.immediate (the current reordering behavior)
+.fast (ironically named - provides a fast movement but delayed cell movement until you stop dragging)
+.slow (similar to iOS SpringBoard home screen reordering)
+
+#### Spring Loading
+This works by default for Table View and Collection View
+
+#### Customizing Cell Appearance
+There are phases of .none, .lifting, .dragging
+
+```dragStateDidChange``` lets you customize the look of your cells or drop items based on their current state
+
+#### Customizing the Drag Preview
+There is a delegate method that lets you clip or crop cell images if there are borders that you don't want to be shown in your drop item preview
+
+#### Summary
+##### Nothing earth shattering here. As expected, these foundational UI building blocks work well with drag and drop with minimal customization required but you can tweak the experience if you like. Placeholders for async cell loading is a nice addition. 
+
 ## Open Questions
 1. WebViews support drag and drop by default , which ones?  UIWebView? WKWebView? SafariVC?
 2. Which hardware supports iOS 11 productivity?
