@@ -528,6 +528,9 @@ There are strong implications here for a video moment sharing application
 #### Summary
 ##### This is a big set of APIs. The team seems to have really thought this through and all of the features you would expect are here. You can get started with a base implementation by using UIDocument based documents with UIDocumentBrowserViewController and reach deeper for more powerful customizations like non iCloud cloud providers, VC transitions, and document thumbnails.
 
+### Session 409 - What's New in Testing
+
+
 ## Open Questions
 1. WebViews support drag and drop by default , which ones?  UIWebView? WKWebView? SafariVC?
 2. Which hardware supports iOS 11 productivity?
@@ -539,3 +542,5 @@ There are strong implications here for a video moment sharing application
 - Advances in Networking, Part 1
 - Advances in Networking, Part 2
 - Customized Loading in WKWebView
+- What's New in Device Configuration
+- Advanced Animations with UIKit
