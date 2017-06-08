@@ -366,10 +366,113 @@ There is a delegate method that lets you clip or crop cell images if there are b
 #### Summary
 ##### Nothing earth shattering here. As expected, these foundational UI building blocks work well with drag and drop with minimal customization required but you can tweak the experience if you like. Placeholders for async cell loading is a nice addition. 
 
+### Session 711 - Accelerate and Sparse Solvers
+#### Accelerate
+Start by importing Accelerate
+Much faster and more energy efficient than vsmul, vclip, sgemm for matrix and vector manipulation
+Don't write your own code for matrix multiplication, use Accelerate
+BNNS functions in Accelerate are the backbone of CoreML
+
+#### Compression
+LZFSE on GitHub
+High performance 
+
+#### BNNS
+Basic Neural Network Subroutines
+High performance kernels for ML
+
+You can generally convert a trained model from 32 bit floating point values to 8 bit unsigned ints without losing precission
+
+Enhancements to perf for functions used by CoreML and Vision
+
+#### simd Module
+Good for small vector and matrix math
+
+SceneKit leverages simd
+
+Matrix multiplication is more performant and readable the BLAS or GLKit
+
+Support for Quaternions?!?!
+
+#### BLAS and LAPACK
+Basic linear algebra subroutines & Linear Algebra PACKage
+
+#### Sparse Matricies
+Sparse Solver on Watch 2 beat Dense Solver on the MacBook Air in a race and it wasn't close
+
+Iterative Method is only faster on huge vectors and matricies
+
+Use Accelerate for faster and more efficient code that is hardware optimized for low level graphics or ML code
+
+#### Summary
+##### This was an extremely advanced talk on linear algebra concepts. If you aren't writing custom shaders or building a neural network framework from scratch, you won't get much out of it.
+
+### Session 712 - What's New in Core Bluetooth
+#### Introduction
+Core Bluetooth is the framework to interact with BluetoothLE devices
+
+Frameworks like Apple Music Service and iBeacon let you interact with no BTLE implementation
+
+iOS and macOS devices are allowed to be the central and the peripheral
+
+A BTLE device can for example, read the time off of your iPhone
+
+The GATT database manages services and characteristics for managing transfers
+
+#### Enhanced Readability
+Enhancements to state preservation and restoration
+
+State callbacks now persist even across device reboot or other Bluetooth system events
+
+_NOTE: Apple calls killing an app "force quit" through the app switcher_
+
+New property will tell your app if more data can be sent
+
+Support for iOS, macOS, tvOS, and now watchOS
+
+tvOS is foreground only and Central only, limited to 2 simultaneous devices, peripherals are disconnected when your app moves to the background
+
+watchOS is similar to tvOS, central only and 2 simultaneous connections only, disconnect when app suspended
+
+watchOS only supported on Watch Series 2
+
+Both tvOS and watchOS
+
+#### L2CAP Channels
+This is the protocol Core Bluetooth uses and now it's available directly to developers
+
+PSM can be thought of as the TCP port for L2CAP
+
+There is also peripheral support for L2CAP, you can specify if encryption should be used or not
+
+The ```CBL2CAPChannl``` class encapsulates a lot of this functionality
+
+You get an end encountered callback when channel is closed
+
+Use L2CAP when GATT doesn't meet your needs, when you want the best performance or lowest overhead, good for large updates like a firmware update
+
+#### Best Practices
+Discovery timeline can be optimized by using shortest advertising interval possible but beware of energy tradeoffs
+
+Reconnecting - You can connect directly if you stored the identifier
+
+Discovering the GATT database performs better the fewer services or characteristics you use
+
+Support GATT caching
+
+When making a device, use the latest chipset / Bluetooth standards (4.2 or 5.0)
+
+#### Getting the Most out of Core Bluetooth
+You can achieve an increase from 2.5kbps to nearly 400kbps using L2CAP directly with EDL can get to near 400kbps for write only transfers
+
+#### Summary
+##### Support for Watch Series 2 and direct access to the L2CAP protocol are the big news here. There are also a lot of oppotunities to increase connection speeds with the latest Bluetooth and L2CAP.
+
 ## Open Questions
 1. WebViews support drag and drop by default , which ones?  UIWebView? WKWebView? SafariVC?
 2. Which hardware supports iOS 11 productivity?
 3. How far does the Xcode feature to mirror the file system from your groups go? When you create a new group, does it create a new folder?
+4. Is there anything stopping you from compiling Swift for web ASM or has no one tried it yet?
 
 ## Watch List
 - Mastering Drag and Drop
