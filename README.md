@@ -529,7 +529,73 @@ There are strong implications here for a video moment sharing application
 ##### This is a big set of APIs. The team seems to have really thought this through and all of the features you would expect are here. You can get started with a base implementation by using UIDocument based documents with UIDocumentBrowserViewController and reach deeper for more powerful customizations like non iCloud cloud providers, VC transitions, and document thumbnails.
 
 ### Session 409 - What's New in Testing
+:construction:
+Some nice improvements to UITesting performance, they re-designed the way the system queries for UI elements
 
+You can chain together multi app testing now by specifying the bundle ID of the app you'd like to launch or activate
+
+You can organize like groups of test methods into Activities now, this is probably a nicer approach than the page object model our team is using now but we'll need to explore it further
+
+You can control + click the test diamond to jump to the test report or other quick actions
+
+The big takeaway was that you can take screen shots and save them to disk now
+
+You can even view in the split pane editor in Xcode
+
+You can customize when the images should be saved or discarded via the scheme settings or in the UITest code
+
+Very nice ability to capture a full screen screenshot or a shot of an individual element, this his huge
+
+### Session 411 - What's New in LLVM
+:construction:
+
+### Session 234 - What's New in iMessage Apps
+#### What's New
+New app drawer UI
+
+When a user installs your app via the Messages App Store or the main App Store, it is installed by default in Messages and set to the most recent app
+
+#### Direct Send
+Now you can use send() API to post messages directly without the user needing to hit send
+
+  Similar to insert() API from iOS 10
+ 
+Make sure to clearly denote that when they tap an element, it will send right away
+
+Requirements:
+- Application must be visible (not in background)
+- Can send one message per interaction only
+- New error codes were added to handle these cases
+
+#### Live Message Layouts
+You can add completely custom views with maps, live updating countdowns, text - whatever you want to the conversation
+
+You can have different views for sender and receiver
+
+Tapping a live message can open your iMessage app in a different presentation style like full screen
+
+This uses ```MSMessagesAppViewController``` for the view in the conversation and the app itself in the keyboard area
+
+```MSMessageLayout``` lets you customize the app bubble with ```MSMessageTemplateLayout```
+
+```MSMessageLiveLayout``` is new in iOS 11 lets you on devices that have your app installed and are on the latest xOS version
+
+Use .transcript presentation style for display in the conversation in your ```MSMessagesAppViewController``` subclass
+Use .compact / .expanded for display in the keyboard area
+
+Override contentSizeThatFits to account for larger system fonts due to dynamic type
+
+_NOTE: There is a .lineHeight property on UIFont objects_
+
+There is an ```isPending``` property that lets you know if your vc is in the preview pane about to be sent
+
+#### Best Practices
+Use ```safeAreaInsets``` property on UIView in iOS 11
+
+There is a ```summaryText``` property on ```MSMessage``` that will now be used for notifications when a text comes in
+
+#### Summary
+##### Major focus was on more useful and functional applications, not stickers. Hopefully the design and APIs will bring some life to this seemingly barron app ecosystem.
 
 ## Open Questions
 1. WebViews support drag and drop by default , which ones?  UIWebView? WKWebView? SafariVC?
