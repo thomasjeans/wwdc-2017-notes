@@ -3,11 +3,15 @@
 I was extremely fortunate to have the opportunity to attend #WWDC17 in San Jose this year! This repo contains some of my notes from the conference.
 
 ## Notes
-[Day 1](https://github.com/thomasjeans/wwdc-2017-notes/blob/master/day-1.md):construction:
+[Day 1](https://github.com/thomasjeans/wwdc-2017-notes/blob/master/day-1.md) :construction:
+
 [Day 2](https://github.com/thomasjeans/wwdc-2017-notes/blob/master/day-2.md)
+
 [Day 3](https://github.com/thomasjeans/wwdc-2017-notes/blob/master/day-3.md)
+
 [Day 4](https://github.com/thomasjeans/wwdc-2017-notes/blob/master/day-4.md)
-[Day 5](https://github.com/thomasjeans/wwdc-2017-notes/blob/master/day-5.md):construction:
+
+[Day 5](https://github.com/thomasjeans/wwdc-2017-notes/blob/master/day-5.md) :construction:
 
 ## Open Questions
 1. WebViews support drag and drop by default , which ones?  UIWebView? WKWebView? SafariVC?
