@@ -597,6 +597,12 @@ There is a ```summaryText``` property on ```MSMessage``` that will now be used f
 #### Summary
 ##### Major focus was on more useful and functional applications, not stickers. Hopefully the design and APIs will bring some life to this seemingly barron app ecosystem.
 
+## Day 5: Friday June 9, 2017
+### Session 412 - Auto Layout Techniques in Interface Builder
+:construction:
+### Session 609 - Going Beyond 2D with SpriteKit
+:construction:
+
 ## Open Questions
 1. WebViews support drag and drop by default , which ones?  UIWebView? WKWebView? SafariVC?
 2. Which hardware supports iOS 11 productivity?
