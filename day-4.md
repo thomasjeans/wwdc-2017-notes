@@ -190,8 +190,6 @@ You can draw the thumbnail or provide an image file URL
 
 This is pretty sweet and will result in a rich platform wide document access system
 
-There are strong implications here for a video moment sharing application
-
 #### Summary
 ##### This is a big set of APIs. The team seems to have really thought this through and all of the features you would expect are here. You can get started with a base implementation by using UIDocument based documents with UIDocumentBrowserViewController and reach deeper for more powerful customizations like non iCloud cloud providers, VC transitions, and document thumbnails.
 
